@@ -8,6 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- Ícones Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
 
 
@@ -46,80 +47,55 @@
   </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="#home">Casa Materiais</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="#nossahistoria" class="nav-link">Nossa História</a></li>
-          <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
-          <li class="nav-item"><a href="#carreiras" class="nav-link">Carreiras</a></li>
-          <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-        </ul>
-      </div>
+  <!-- Exemplo de navbar moderna com submenu -->
+<nav class="navbar navbar-expand-lg navbar-white bg-white fixed-top shadow-sm py-3">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.html" style="font-size:1.5rem;">
+      <i class="bi bi-house-door-fill"></i> Casa Materiais
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-2">
+        <li class="nav-item"><a href="index.html" class="nav-link px-3">Home</a></li>
+        <li class="nav-item"><a href="nossahistoria.html" class="nav-link px-3">Nossa História</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="produtos.html" id="produtosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Produtos
+          </a>
+         </a>
+            <ul class="dropdown-menu" aria-labelledby="produtosDropdown">
+              <li><a class="dropdown-item" href="construcao.html">Para sua construção</a></li>
+              <li><a class="dropdown-item" href="Materiaishidráulicos.html">Materiais hidráulicos</a></li>
+              <li><a class="dropdown-item" href="Materiaiselétricos.html">Materiais elétricos</a></li>
+              <li><a class="dropdown-item" href="Tintas.html">Tintas</a></li>
+              <li><a class="dropdown-item" href="Vernizes.html">Vernizes</a></li>
+              <li><a class="dropdown-item" href="Esmaltes.html">Esmaltes</a></li>
+              <li><a class="dropdown-item" href="Ferramentas.html">Ferramentas</a></li>
+              <li><a class="dropdown-item" href="Pisoserevestimentos.html">Pisos e revestimentos</a></li>
+              <li><a class="dropdown-item" href="Metais.html">Metais</a></li>
+              <li><a class="dropdown-item" href="Portas.html">Portas</a></li>
+              <li><a class="dropdown-item" href="Janelas.html">Janelas</a></li>
+            </ul>
+        </li>
+        <li class="nav-item"><a href="index.html#carreiras" class="nav-link px-3">Carreiras</a></li>
+        <li class="nav-item"><a href="index.html#contato" class="btn btn-primary ms-2 px-4 py-2 fw-semibold" style="border-radius: 25px;">Contato</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <!-- Header -->
-  <header id="home">
-    <h1>Casa Materiais de Construção</h1>
-    <div class="divider"></div>
-    <p>Sua parceira de confiança para construção e reforma. Qualidade, preço justo e atendimento especializado.</p>
-    <a href="#nossahistoria" class="btn btn-light mt-3">Saiba Mais</a>
-  </header>
-
-  <!-- Nossa História -->
-  <section id="nossahistoria" class="bg-primary text-white text-center">
-    <div class="container">
-      <h2>Nossa História</h2>
-      <div class="divider bg-light"></div>
-      <p>A Casa Materiais de Construção nasceu no bairro Canaã, em Ipatinga – MG, em 2006, fundada por Lucas Fernandes, com o propósito de ajudar pessoas a construírem seus sonhos.</p>
-      <p>Com atendimento personalizado e foco na qualidade, seguimos firmes há mais de uma década, prontos para construir o futuro com você.</p>
-      <a href="#carreiras" class="btn btn-light mt-3">Comece!</a>
-    </div>
-  </section>
-
-  <!-- Produtos -->
-  <section id="produtos" class="text-center">
-    <div class="container">
-      <h2>Produtos</h2>
+  <header id="home" class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-content container">
+      <h1>Casa Materiais de Construção</h1>
       <div class="divider"></div>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="portfolio-box">
-            <img src="assets/img/portfolio/thumbnails/1.jpg" alt="Materiais de Alvenaria" />
-            <div class="portfolio-box-caption">
-              <h5>Materiais de Alvenaria</h5>
-              <p>Blocos e Tijolos</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="portfolio-box">
-            <img src="assets/img/portfolio/thumbnails/2.jpg" alt="Ferramentas e Equipamentos" />
-            <div class="portfolio-box-caption">
-              <h5>Ferramentas e Equipamentos</h5>
-              <p>Martelos, Serras, Furadeiras</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="portfolio-box">
-            <img src="assets/img/portfolio/thumbnails/3.jpg" alt="Acabamento" />
-            <div class="portfolio-box-caption">
-              <h5>Acabamento</h5>
-              <p>Pisos e Revestimentos</p>
-            </div>
-          </div>
-        </div>
-        <!-- Você pode adicionar mais produtos seguindo o padrão acima -->
-      </div>
+      <p>Sua parceira de confiança para construção e reforma.<br>Qualidade, preço justo e atendimento especializado.</p>
+      <a href="nossahistoria.html" class="btn btn-light mt-3">Clique Mais</a>
     </div>
-  </section>
+  </header>
 
   <!-- Carreiras -->
   <section id="carreiras" class="bg-light text-center">

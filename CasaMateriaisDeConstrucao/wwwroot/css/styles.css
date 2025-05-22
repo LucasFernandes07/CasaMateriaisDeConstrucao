@@ -1,20 +1,20 @@
-/* Fonte principal e espaçamento geral */
+/* Fonte principal e espaçamento */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-top: 70px;
-  background: #f8f9fa; /* fundo suave */
-  color: #333;
+  background: #f8fafc;
+  color: #222;
   line-height: 1.6;
   scroll-behavior: smooth;
 }
 
 /* Header com cor e espaçamento */
 header {
-  background: #007bff;
+  background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
   color: white;
-  padding: 100px 20px;
+  padding: 80px 0;
   text-align: center;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 header h1 {
@@ -45,16 +45,17 @@ header .btn-light:hover {
 
 /* Divisor estilizado */
 .divider {
-  width: 70px;
-  height: 5px;
+  width: 60px;
+  height: 4px;
   background: #007bff;
-  margin: 20px auto 40px;
-  border-radius: 3px;
+  margin: 20px auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.15);
 }
 
 /* Seções */
 section {
-  padding: 60px 15px;
+  padding: 50px 15px;
 }
 
 /* Seção Nossa História */
@@ -88,79 +89,86 @@ section {
   color: white;
 }
 
-/* Produtos - cards */
-#produtos h2 {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+/* Produtos - Hero Section */
+.produtos-hero {
+  background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
+  color: #fff;
+  padding: 60px 0 40px 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.produtos-hero h1 {
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.produtos-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.95;
 }
 
-.portfolio-box {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+/* Produtos - Cards */
+.produtos-lista {
+  padding: 40px 0 60px 0;
 }
-
-.portfolio-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
+.produto-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 32px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
-.portfolio-box img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.produto-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,123,255,0.10);
+}
+.produto-img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  background: #e9ecef;
 }
-
-.portfolio-box-caption {
-  padding: 15px 10px;
-  text-align: center;
+.produto-body {
+  padding: 24px 18px 18px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.portfolio-box-caption h5 {
-  font-weight: 600;
+.produto-titulo {
   font-size: 1.25rem;
-  margin-bottom: 5px;
+  font-weight: 700;
   color: #007bff;
+  margin-bottom: 8px;
 }
-
-.portfolio-box-caption p {
+.produto-desc {
+  color: #444;
   font-size: 1rem;
-  color: #666;
-  margin: 0;
+  margin-bottom: 16px;
 }
-
-/* Seção Carreiras */
-#carreiras {
-  background-color: #f8f9fa;
-  text-align: center;
+.produto-btn {
+  margin-top: auto;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 8px 24px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+  text-decoration: none;
+  display: inline-block;
 }
-
-#carreiras h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-#carreiras p {
-  font-size: 1.15rem;
-  max-width: 600px;
-  margin: 0 auto 25px;
-}
-
-#carreiras .btn-primary {
-  padding: 12px 30px;
-  font-weight: 700;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
-
-#carreiras .btn-primary:hover {
-  background-color: #004085;
+.produto-btn:hover {
+  background: #0056b3;
+  color: #fff;
 }
 
 /* Contato */
@@ -176,15 +184,15 @@ section {
 }
 
 #contato .form-control {
-  border-radius: 8px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
   box-shadow: none;
-  border: 1.5px solid #ced4da;
-  transition: border-color 0.3s ease;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 #contato .form-control:focus {
   border-color: #007bff;
-  box-shadow: 0 0 6px #80bdff;
+  box-shadow: 0 0 0 2px rgba(0,123,255,0.10);
 }
 
 #contato button {
@@ -214,14 +222,147 @@ section {
 
 /* Footer */
 footer {
-  background-color: #f8f9fa;
-  color: #6c757d;
-  font-size: 0.9rem;
-  font-weight: 600;
+  background: #fff;
+  border-top: 1px solid #e3e6ea;
+  color: #888;
+  font-size: 0.95rem;
   letter-spacing: 0.5px;
 }
 
-/* Responsividade */
+/* Navbar */
+.navbar {
+  background: #fff !important;
+  border-bottom: 1px solid #e3e6ea;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #007bff !important;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  transition: color 0.2s;
+}
+
+.navbar-brand:hover {
+  color: #0056b3 !important;
+}
+
+.nav-link {
+  color: #222 !important;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: #f1f3f6;
+  color: #007bff !important;
+}
+
+.navbar .btn-primary {
+  background: #007bff;
+  border: none;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.10);
+}
+
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {
+  background: #0056b3;
+  box-shadow: 0 4px 16px rgba(0,123,255,0.15);
+}
+
+/* Hero Section Moderno */
+.hero-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+  background: #007bff;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/img/hero-bg.jpg') center center/cover no-repeat;
+  filter: brightness(0.5) blur(1px);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 60px 15px 80px 15px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.hero-content .btn-light {
+  font-weight: 700;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: background 0.2s, color 0.2s;
+}
+
+.hero-content .btn-light:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* Nossa História - Hero */
+.nossahistoria-hero {
+  min-height: 45vh;
+  background: linear-gradient(90deg, #007bff 60%, #0056b3 100%);
+  color: #fff;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.nossahistoria-hero .divider {
+  width: 60px;
+  height: 4px;
+  background: #fff;
+  margin: 0 auto 24px auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,123,255,0.15);
+}
+.nossahistoria-conteudo {
+  background: #fff;
+}
+.nossahistoria-conteudo h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #007bff;
+}
+.nossahistoria-conteudo p {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.nossahistoria-conteudo img {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
 @media (max-width: 767.98px) {
   header h1 {
     font-size: 2rem;
@@ -233,6 +374,21 @@ footer {
     font-size: 2rem;
   }
   .portfolio-box img {
-    height: 180px;
+    height: 140px;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .produtos-hero h1 { font-size: 2rem; }
+  .produto-img { height: 140px; }
+  .nossahistoria-hero {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+  .nossahistoria-conteudo {
+    padding: 30px 0;
   }
 }
